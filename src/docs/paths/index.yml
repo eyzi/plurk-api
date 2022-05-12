@@ -1,0 +1,6 @@
+/:
+  get:
+    $ref: "info/redirect.yml"
+/health:
+  get:
+    $ref: "info/health.yml"

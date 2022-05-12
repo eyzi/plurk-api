@@ -1,0 +1,5 @@
+version: "%PACKAGE_VERSION%"
+title: Plurk API
+contact:
+  name: Plurk API
+  url: https://plurk.com
