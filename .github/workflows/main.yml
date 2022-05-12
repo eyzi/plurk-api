@@ -77,4 +77,4 @@ jobs:
           api_url:    ${{ secrets.DEPLOY_URL }}
           api_token:  ${{ secrets.DEPLOY_TOKEN }}
           image:      ${{ steps.tag.outputs.bare }}
-          version:      ${{ steps.package-version.outputs.current-version }}
+          version:    ${{ steps.package-version.outputs.current-version }}
