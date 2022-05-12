@@ -1,6 +1,10 @@
 - name: info
-  description: API info
+  description: API info and miscellaneous operations
 - name: oauth
   description: oAuth
 - name: me
-  description: Current user info
+  description: Current user operations
+- name: users
+  description: User operations
+- name: plurks
+  description: Plurk operations

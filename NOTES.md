@@ -26,6 +26,7 @@ property `unread` instead
 ```
 GET /me
 PATCH /me
+POST /me/avatar
 GET /me/profile
 GET /me/karma
 GET /me/fans

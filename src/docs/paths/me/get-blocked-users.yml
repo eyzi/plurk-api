@@ -1,0 +1,6 @@
+summary: "Get blocked users"
+operationId: notImplemented
+tags: ["me"]
+responses:
+  503:
+    $ref: "../../common/errors.yml#/NotImplemented"

@@ -16,5 +16,8 @@ NotAuthenticated:
 NotAuthorized:
   description: "You are not allowed to see this content"
 
+NotImplemented:
+  description: "This feature is not available"
+
 UnknownError:
   description: "Something went wrong"

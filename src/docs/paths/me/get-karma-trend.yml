@@ -1,0 +1,6 @@
+summary: "Get karma trend of current user"
+operationId: notImplemented
+tags: ["me"]
+responses:
+  503:
+    $ref: "../../common/errors.yml#/NotImplemented"

@@ -4,13 +4,51 @@
 /health:
   get:
     $ref: "info/health.yml"
+/echo:
+  post:
+    $ref: "info/echo.yml"
+/time:
+  get:
+    $ref: "info/get-server-time.yml"
+/emoticons:
+  get:
+    $ref: "info/get-emoticons.yml"
+/search/users:
+  get:
+    $ref: "info/search-users.yml"
+/search/plurks:
+  get:
+    $ref: "info/search-plurks.yml"
+
 /oauth:
   get:
-    $ref: "oauth/get-oauth.yml"
+    $ref: "oauth/get.yml"
+  delete:
+    $ref: "oauth/expire.yml"
 /oauth/verify:
   get:
     $ref: "oauth/verify.yml"
 
+/me:
+  get:
+    $ref: "me/get-user-info.yml"
+  patch:
+    $ref: "me/edit-user-info.yml"
 /me/profile:
   get:
-    $ref: "me/profile.yml"
+    $ref: "me/get-my-profile.yml"
+/me/avatar:
+  post:
+    $ref: "me/update-avatar.yml"
+/me/karma:
+  get:
+    $ref: "me/get-karma-trend.yml"
+/me/friends:
+  get:
+    $ref: "me/get-my-friends.yml"
+/me/fans:
+  get:
+    $ref: "me/get-my-fans.yml"
+/me/blocked:
+  get:
+    $ref: "me/get-blocked-users.yml"

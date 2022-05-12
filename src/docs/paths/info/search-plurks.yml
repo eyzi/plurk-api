@@ -1,0 +1,6 @@
+summary: "Search plurks"
+operationId: notImplemented
+tags: ["info"]
+responses:
+  503:
+    $ref: "../../common/errors.yml#/NotImplemented"
