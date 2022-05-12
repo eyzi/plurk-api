@@ -54,13 +54,16 @@ jobs:
     if: "contains(github.event.head_commit.message, 'chore(release)')"
     steps:
       - name: Get package version
-        uses: martinbeentjes/npm-get-version-action@main
-        id: package-version
-      - name: Set image
+        id: version
+        run: |
+          export PACKAGE_VERSION=$(cat ./package.json | jq '.version' | tr -d '"')
+          echo "New version is v$PACKAGE_VERSION"
+          echo "::set-output name=semver::$PACKAGE_VERSION"
+      - name: Tag image
         id: tag
         run: |
           echo "::set-output name=bare::${{secrets.DOCKER_REGISTRY}}/${{secrets.DOCKER_REPOSITORY}}"
-          echo "::set-output name=version::${{secrets.DOCKER_REGISTRY}}/${{secrets.DOCKER_REPOSITORY}}:${{steps.package-version.outputs.current-version}}"
+          echo "::set-output name=version::${{secrets.DOCKER_REGISTRY}}/${{secrets.DOCKER_REPOSITORY}}:${{steps.version.outputs.semver}}"
       - uses: docker/login-action@v1
         name: Login to docker registry
         with:
@@ -77,4 +80,4 @@ jobs:
           api_url:    ${{ secrets.DEPLOY_URL }}
           api_token:  ${{ secrets.DEPLOY_TOKEN }}
           image:      ${{ steps.tag.outputs.bare }}
-          version:    ${{ steps.package-version.outputs.current-version }}
+          version:    ${{ steps.version.outputs.semver }}
