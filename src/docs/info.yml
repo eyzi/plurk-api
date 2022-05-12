@@ -1,5 +1,8 @@
 version: "%PACKAGE_VERSION%"
 title: Plurk API
+description: >
+  This is a personal revision of the
+  [Plurk API](https://www.plurk.com/API) design
 contact:
-  name: Plurk API
-  url: https://plurk.com
+  name: Source Code
+  url: https://github.com/eyzi/plurk-api
