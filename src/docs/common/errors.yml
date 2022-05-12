@@ -13,5 +13,8 @@ NotAuthenticated:
               Link to get verifier to be used in `/oauth/verify`
             example: 123456
 
+NotAuthorized:
+  description: "You are not allowed to see this content"
+
 UnknownError:
   description: "Something went wrong"

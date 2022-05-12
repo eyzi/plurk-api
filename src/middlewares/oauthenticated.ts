@@ -1,4 +1,5 @@
 import { Handler, Request } from "express"
+import { StatusCodes } from "http-status-codes"
 import requestToken from "../services/oauth/request-token"
 import buildAuthLink from "../services/plurk/build-auth-link"
 
@@ -16,12 +17,12 @@ const authenticated: Handler = async (req, res, next) => {
       .catch(error => console.error("problem requesting token", error))
     
     if (!requestTokenResponse)
-      return res.status(500).end()
+      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).end()
     
     const { requestTokenKey, requestTokenSecret } = requestTokenResponse
     req.app.locals.requestTokenKey = requestTokenKey
     req.app.locals.requestTokenSecret = requestTokenSecret
-    return res.status(403).json({ auth_link: buildAuthLink(requestTokenKey) })
+    return res.status(StatusCodes.UNAUTHORIZED).json({ auth_link: buildAuthLink(requestTokenKey) })
   }
   
   return next()

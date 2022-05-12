@@ -1,5 +1,6 @@
-import { Handler, Request } from "express";
-import getAccessToken from "../../services/oauth/get-access-token";
+import { Handler, Request } from "express"
+import { StatusCodes } from "http-status-codes"
+import getAccessToken from "../../services/oauth/get-access-token"
 
 const getVerifyParameters = (req: Request) => ({
   oauth: req.app.locals.oauth,
@@ -14,7 +15,7 @@ export const verifyOauth: Handler = async (req, res) => {
     .catch(console.error)
 
   if (!accessTokenResponse)
-    return res.status(422).end()
+    return res.status(StatusCodes.UNPROCESSABLE_ENTITY).end()
 
-  res.status(200).json(accessTokenResponse)
+  res.status(StatusCodes.OK).json(accessTokenResponse)
 }

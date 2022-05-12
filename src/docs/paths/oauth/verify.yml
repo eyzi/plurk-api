@@ -1,4 +1,4 @@
-summary: "Callback endpoint for oAuth"
+summary: "Verify authentication"
 operationId: verifyOauth
 x-skip-oauth-check: true
 tags: ["oauth"]
