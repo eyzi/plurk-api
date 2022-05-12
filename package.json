@@ -1,6 +1,6 @@
 {
   "name": "plurk-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "personal take on plurk api architecture",
   "main": "lib/index.js",
   "repository": "git@github.com:eyzi/plurk-api.git",
