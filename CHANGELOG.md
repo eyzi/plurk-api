@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/eyzi/plurk-api/compare/v0.0.7...v0.0.8) (2022-05-12)
+
+
+### Features
+
+* **openapi:** add current user, oauth, and misc openapi placeholders ([f561d3e](https://github.com/eyzi/plurk-api/commit/f561d3ee541ab61b62fe9ee6f1c69c6394c829bd))
+
 ### [0.0.7](https://github.com/eyzi/plurk-api/compare/v0.0.6...v0.0.7) (2022-05-12)
 
 ### [0.0.6](https://github.com/eyzi/plurk-api/compare/v0.0.5...v0.0.6) (2022-05-12)
