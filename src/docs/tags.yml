@@ -1,2 +1,6 @@
 - name: info
   description: API info
+- name: oauth
+  description: oAuth
+- name: me
+  description: Current user info

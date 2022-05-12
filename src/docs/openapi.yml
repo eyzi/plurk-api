@@ -5,5 +5,18 @@ servers:
   - url: /
 tags:
   $ref: "tags.yml"
+security:
+  - OauthToken: []
+    OauthSecret: []
 paths:
   $ref: "paths/index.yml"
+components:
+  securitySchemes:
+    OauthToken:
+      type: apiKey
+      in: header
+      name: oauth-token
+    OauthSecret:
+      type: apiKey
+      in: header
+      name: oauth-secret

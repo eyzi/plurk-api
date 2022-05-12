@@ -4,3 +4,13 @@
 /health:
   get:
     $ref: "info/health.yml"
+/oauth:
+  get:
+    $ref: "oauth/get-oauth.yml"
+/oauth/verify:
+  get:
+    $ref: "oauth/verify.yml"
+
+/me/profile:
+  get:
+    $ref: "me/profile.yml"

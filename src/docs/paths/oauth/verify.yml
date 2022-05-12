@@ -1,0 +1,28 @@
+summary: "Callback endpoint for oAuth"
+operationId: verifyOauth
+x-skip-oauth-check: true
+tags: ["oauth"]
+parameters:
+  - name: oauth_verifier
+    description: oAuth verifier
+    in: query
+    required: true
+    schema:
+      type: string
+      example: 123456
+responses:
+  200:
+    description: "Authenticated"
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            oauth_token:
+              type: string
+              description: Set in request headers as `oauth-token`
+            oauth_secret:
+              type: string
+              description: Set in request headers as `oauth-secret`
+  422:
+    description: "Could not verify authentication"

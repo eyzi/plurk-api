@@ -1,0 +1,17 @@
+NotAuthenticated:
+  description: "Not Authentication"
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - auth_link
+        properties:
+          auth_link:
+            type: string
+            description: >
+              Link to get verifier to be used in `/oauth/verify`
+            example: 123456
+
+UnknownError:
+  description: "Something went wrong"

@@ -1,0 +1,1 @@
+export const PLURK_BASE_URL = "https://www.plurk.com"

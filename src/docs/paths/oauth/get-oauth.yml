@@ -1,0 +1,10 @@
+summary: "Callback endpoint for oAuth"
+operationId: getOauth
+tags: ["oauth"]
+responses:
+  204:
+    description: "Authenticated"
+  403:
+    $ref: "../../common/errors.yml#/NotAuthenticated"
+  500:
+    $ref: "../../common/errors.yml#/UnknownError"
