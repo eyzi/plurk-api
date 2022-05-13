@@ -1,0 +1,8 @@
+summary: get user plurks
+operationId: notImplemented
+tags:
+  - users
+  - plurks
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

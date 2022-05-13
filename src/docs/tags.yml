@@ -1,10 +1,14 @@
 - name: info
   description: API info and miscellaneous operations
 - name: oauth
-  description: oAuth
+  description: Authentication using oAuth 1.0
 - name: me
   description: Current user operations
 - name: users
   description: User operations
+- name: cliques
+  description: Clique operations
 - name: plurks
   description: Plurk operations
+- name: alerts
+  description: Notifications, actions, and polling

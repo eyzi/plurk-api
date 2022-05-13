@@ -38,7 +38,7 @@
   get:
     $ref: "me/get-my-profile.yml"
 /me/avatar:
-  post:
+  put:
     $ref: "me/update-avatar.yml"
 /me/karma:
   get:
@@ -52,3 +52,130 @@
 /me/blocked:
   get:
     $ref: "me/get-blocked-users.yml"
+
+/users/{userId}/profile:
+  get:
+    $ref: "users/get-user-profile.yml"
+/users/{userId}/friends:
+  get:
+    $ref: "users/get-user-friends.yml"
+/users/{userId}/fans:
+  get:
+    $ref: "users/get-user-fans.yml"
+/users/{userId}/befriend:
+  put:
+    $ref: "users/befriend-user.yml"
+  delete:
+    $ref: "users/unfriend-user.yml"
+/users/{userId}/follow:
+  put:
+    $ref: "users/follow-user.yml"
+  delete:
+    $ref: "users/unfollow-user.yml"
+/users/{userId}/block:
+  put:
+    $ref: "users/block-user.yml"
+  delete:
+    $ref: "users/unblock-user.yml"
+/users/{userId}/plurks:
+  get:
+    $ref: "users/get-user-plurks.yml"
+
+/cliques:
+  get:
+    $ref: "cliques/get-cliques.yml"
+/cliques/{name}:
+  get:
+    $ref: "cliques/get-clique-by-name.yml"
+  post:
+    $ref: "cliques/create-clique.yml"
+  patch:
+    $ref: "cliques/rename-clique.yml"
+/cliques/{name}/users/{userId}:
+  put:
+    $ref: "cliques/add-user-to-clique.yml"
+  delete:
+    $ref: "cliques/remove-user-from-clique.yml"
+
+/plurks:
+  get:
+    $ref: "plurks/get-plurks.yml"
+  post:
+    $ref: "plurks/post-plurk.yml"
+/plurks/{plurkId}:
+  get:
+    $ref: "plurks/get-plurk.yml"
+  patch:
+    $ref: "plurks/edit-plurk.yml"
+  delete:
+    $ref: "plurks/delete-plurk.yml"
+/plurks/{plurkId}/comments:
+  get:
+    $ref: "plurks/get-plurk-comments.yml"
+/plurks/{plurkId}/responses:
+  get:
+    $ref: "plurks/get-plurk-responses.yml"
+  post:
+    $ref: "plurks/post-plurk-response.yml"
+/plurks/{plurkId}/responses/{responseId}:
+  delete:
+    $ref: "plurks/delete-plurk-response.yml"
+/plurks/{plurkId}/mute:
+  put:
+    $ref: "plurks/mute-plurk.yml"
+  delete:
+    $ref: "plurks/unmute-plurk.yml"
+/plurks/{plurkId}/favorite:
+  put:
+    $ref: "plurks/favorite-plurk.yml"
+  delete:
+    $ref: "plurks/unfavorite-plurk.yml"
+/plurks/{plurkId}/replurk:
+  put:
+    $ref: "plurks/replurk.yml"
+  delete:
+    $ref: "plurks/unreplurk.yml"
+/plurks/batch/mute:
+  put:
+    $ref: "plurks/mute-plurk-batch.yml"
+  delete:
+    $ref: "plurks/unmute-plurk-batch.yml"
+/plurks/batch/favorite:
+  put:
+    $ref: "plurks/favorite-plurk-batch.yml"
+  delete:
+    $ref: "plurks/unfavorite-plurk-batch.yml"
+/plurks/batch/replurk:
+  put:
+    $ref: "plurks/replurk-batch.yml"
+  delete:
+    $ref: "plurks/unreplurk-batch.yml"
+
+
+/alerts:
+  get:
+    $ref: "alerts/get-alerts.yml"
+/realtime:
+  get:
+    $ref: "alerts/get-realtime-data.yml"
+/realtime/{channelName}:
+  get:
+    $ref: "alerts/get-realtime-data-by-channel.yml"
+/requests/friend:
+  put:
+    $ref: "alerts/accept-all-friend-requests-as-friends.yml"
+/requests/fan:
+  put:
+    $ref: "alerts/accept-all-friend-requests-as-fans.yml"
+/requests/{userId}:
+  delete:
+    $ref: "alerts/remove-friend-request.yml"
+/requests/{userId}/friend:
+  put:
+    $ref: "alerts/accept-friend-request-as-friend.yml"
+/requests/{userId}/fan:
+  put:
+    $ref: "alerts/accept-friend-request-as-fan.yml"
+/requests/{userId}/deny:
+  put:
+    $ref: "alerts/deny-friend-request.yml"

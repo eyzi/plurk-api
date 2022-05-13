@@ -2,5 +2,7 @@ summary: "Expire authentication token"
 operationId: notImplemented # expireOauth
 tags: ["oauth"]
 responses:
-  503:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  200:
+    description: "Token successfully expired"
+  500:
+    description: "Problem expiring token"

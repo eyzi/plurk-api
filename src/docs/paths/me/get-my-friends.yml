@@ -2,5 +2,5 @@ summary: "Get friends of current user"
 operationId: notImplemented
 tags: ["me"]
 responses:
-  503:
+  501:
     $ref: "../../common/errors.yml#/NotImplemented"

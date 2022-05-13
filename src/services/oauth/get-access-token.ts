@@ -11,7 +11,7 @@ type GetAccessTokenResponse = {
 }
 
 type VerifyParams = {
-  oauth: OAuth,
+  oauth: OAuth | undefined,
   requestTokenKey: string,
   requestTokenSecret: string,
   oauthVerifier: string,
@@ -23,6 +23,7 @@ export default ({
   requestTokenSecret,
   oauthVerifier,
 }: VerifyParams) => new Promise<GetAccessTokenResponse>((resolve, reject) => {
+  if (!oauth) return undefined
   const callback = (error: RequestTokenError, accessToken: string, accessTokenSecret: string) => {
     if (error) return reject(error)
     return resolve({ accessToken, accessTokenSecret })

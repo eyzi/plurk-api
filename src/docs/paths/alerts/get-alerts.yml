@@ -1,0 +1,10 @@
+summary: Get alerts
+description: |
+  If `active` is true, it will get active alerts. Otherwise, it will
+  give a history of alerts (last 30)
+operationId: notImplemented
+tags:
+  - alerts
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

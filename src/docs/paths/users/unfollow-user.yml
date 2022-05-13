@@ -1,0 +1,6 @@
+summary: Unfollow user
+operationId: notImplemented
+tags: ["users"]
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

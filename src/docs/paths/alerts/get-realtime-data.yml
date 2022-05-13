@@ -1,0 +1,10 @@
+summary: Get realtime data
+description: |
+  This will give back a JSON object with `comet_server` and
+  `channel_name` field. Unsure how this works still.
+operationId: notImplemented
+tags:
+  - alerts
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

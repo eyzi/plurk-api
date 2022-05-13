@@ -1,4 +1,3 @@
-summary: "Update avatar of current user"
 operationId: notImplemented
 tags: ["me"]
 responses:

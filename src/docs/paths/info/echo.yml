@@ -1,6 +1,12 @@
-summary: "Echo"
-operationId: notImplemented
+summary: "Repeat sent data"
+x-endpoint: /APP/echo
+operationId: lazyPassthrough
 tags: ["info"]
+parameters:
+  - name: data
+    in: query
+    required: true
+    schema:
+      type: string
 responses:
-  503:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

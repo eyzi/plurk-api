@@ -1,0 +1,6 @@
+summary: Get user friends
+operationId: notImplemented
+tags: ["users"]
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

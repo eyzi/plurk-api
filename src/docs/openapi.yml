@@ -8,10 +8,20 @@ tags:
 security:
   - OauthToken: []
     OauthSecret: []
+  - ConsumerKey: []
+    ConsumerSecret: []
 paths:
   $ref: "paths/index.yml"
 components:
   securitySchemes:
+    ConsumerKey:
+      type: apiKey
+      in: header
+      name: consumer-key
+    ConsumerSecret:
+      type: apiKey
+      in: header
+      name: consumer-secret
     OauthToken:
       type: apiKey
       in: header

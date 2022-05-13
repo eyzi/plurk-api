@@ -1,0 +1,6 @@
+200:
+  description: "Success"
+400:
+  description: "Invalid Request"
+500:
+  description: "Request Error"

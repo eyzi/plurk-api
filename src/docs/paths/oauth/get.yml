@@ -1,10 +1,26 @@
 summary: "Get authentication status"
+description: |
+  This is the endpoint to start authentication. If you're already
+  authenticated, then then this returns the information such as
+  user id.
+
+  If you're not yet authenticated, this will return an `auth_link`
+  which you need to open on a browser. You need to authorize this app.
+  After authorization, Plurk will forward you to a url where this app
+  will display your `oauth-token` and `oauth-secret`. You need to add
+  this to the header of every request that requires authentication.
+  Using the swagger UI, there is an `Authorize` button at the top-left
+  of the page where you can assign it to the headers of your subsequent
+  requests. This is not a persistent data and will be reset once you
+  refresh the page.
 operationId: getOauth
 tags: ["oauth"]
 responses:
-  204:
-    description: "Authenticated"
+  200:
+    description: "Authentication information"
   401:
     $ref: "../../common/errors.yml#/NotAuthenticated"
+  404:
+    description: "Authentication token info not found"
   500:
     $ref: "../../common/errors.yml#/UnknownError"

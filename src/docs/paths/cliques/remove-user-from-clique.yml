@@ -1,0 +1,6 @@
+summary: Remove user from clique
+operationId: notImplemented
+tags: ["cliques"]
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

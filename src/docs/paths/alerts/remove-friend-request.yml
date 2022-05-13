@@ -1,0 +1,7 @@
+summary: Remove friend request from user
+operationId: notImplemented
+tags:
+  - alerts
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

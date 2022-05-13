@@ -1,10 +1,11 @@
 import { OauthObject } from "./types"
 
-export default (
-  oauthObject: OauthObject,
+export default <T>(
+  oauthObject: OauthObject | undefined,
   path: string,
   requestBody: object = {}
-) => new Promise((resolve, reject) => {
+) => new Promise<T>((resolve, reject) => {
+  if (!oauthObject) return undefined
   oauthObject.oauth.post(
     path,
     oauthObject.oauthToken,

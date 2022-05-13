@@ -1,6 +1,16 @@
 summary: "Search plurks"
-operationId: notImplemented
+x-endpoint: /APP/PlurkSearch/search
+operationId: lazyPassthrough
 tags: ["info"]
+parameters:
+  - name: query
+    in: query
+    required: true
+    schema:
+      type: string
+  - name: offset
+    in: query
+    schema:
+      type: number
 responses:
-  503:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

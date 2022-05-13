@@ -9,7 +9,13 @@ parameters:
     required: true
     schema:
       type: string
-      example: 123456
+      example: "123456"
+  - name: oauth_token
+    description: oAuth token
+    in: query
+    schema:
+      type: string
+      example: "Yzk5ZDczMzRlNDEwY"
 responses:
   200:
     description: "Authenticated"

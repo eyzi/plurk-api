@@ -1,6 +1,6 @@
 summary: "Get server time"
-operationId: notImplemented
+x-endpoint: /APP/checkTime
+operationId: lazyPassthrough
 tags: ["info"]
 responses:
-  503:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

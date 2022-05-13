@@ -11,7 +11,7 @@ type RequestTokenResponse = {
 }
 
 export default (
-  oauth: OAuth
+  oauth: OAuth | undefined
 ) => new Promise<RequestTokenResponse>((resolve, reject) => {
   if (!oauth) return undefined
 

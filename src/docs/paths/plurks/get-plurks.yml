@@ -1,0 +1,11 @@
+summary: Get plurks
+description: |
+  Get timeline plurks. if `unread` is true, only get unread plurks.
+  if `poll` is true, use polling command which will also ignore some
+  queries.
+operationId: notImplemented
+tags:
+  - plurks
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"

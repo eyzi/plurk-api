@@ -1,0 +1,13 @@
+summary: "Get user profile"
+operationId: lazyPassthrough
+x-endpoint: /APP/Profile/getPublicProfile
+parameters:
+  - name: user_id
+    description: Id of user to get profile
+    required: true
+    in: query
+    schema:
+      type: string
+tags: ["users"]
+responses:
+  $ref: "../../common/lazy-passthrough-responses.yml"

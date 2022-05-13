@@ -72,7 +72,7 @@ DELETE /users/:id/block
 GET /cliques
 GET /cliques/:name
 POST /cliques/:name
-PATCH /cliques/:name/rename
+PATCH /cliques/:name
 POST /cliques/:name/users/:id
 DELETE /cliques/:name/users/:id
 ```
@@ -91,7 +91,15 @@ DELETE /cliques/:name/users/:id
 - /APP/Alerts/removeNotification: remove friend request notification by user id
 
 ```
+GET /poll
+GET /plurks/unread (query: count)
 GET /alerts (query: active, limit)
+POST /requests/:id/friend - accept friend request as friend
+POST /requests/friend - accept all friend requests as friends
+POST /requests/:id/fan - accept friend request as fan
+POST /requests/fan - accept friend requests as fans
+POST /requests/:id/deny - deny friend request
+DELETE /requests/:id - remove friend request from user
 ```
 
 ### plurks

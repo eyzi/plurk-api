@@ -1,0 +1,6 @@
+summary: Get clique by name
+operationId: notImplemented
+tags: ["cliques"]
+responses:
+  501:
+    $ref: "../../common/errors.yml#/NotImplemented"
