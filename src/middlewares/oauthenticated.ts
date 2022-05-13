@@ -4,6 +4,7 @@ import buildOauthFromReq from "../services/oauth/build-oauth-from-req"
 import requestToken from "../services/oauth/request-token"
 import buildAuthLink from "../services/plurk/url/build-auth-link"
 import { HeaderKeys } from "../constants"
+import setTokenSecretInLocals from "../services/oauth/set-token-secret-in-locals"
 
 const skipOauthCheck = (req: any) => req.operationDoc?.["x-skip-oauth-check"]
 
@@ -29,8 +30,7 @@ const authenticated: Handler = async (req, res, next) => {
       return res.status(StatusCodes.INTERNAL_SERVER_ERROR).end()
     
     const { requestTokenKey, requestTokenSecret } = requestTokenResponse
-    req.app.locals.requestTokenKey = requestTokenKey
-    req.app.locals.requestTokenSecret = requestTokenSecret
+    setTokenSecretInLocals(req, requestTokenKey, requestTokenSecret)
     return res.status(StatusCodes.UNAUTHORIZED).json({ auth_link: buildAuthLink(requestTokenKey) })
   }
   

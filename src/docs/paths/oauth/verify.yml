@@ -13,6 +13,7 @@ parameters:
   - name: oauth_token
     description: oAuth token
     in: query
+    required: true
     schema:
       type: string
       example: "Yzk5ZDczMzRlNDEwY"
