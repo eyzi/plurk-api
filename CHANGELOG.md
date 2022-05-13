@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/eyzi/plurk-api/compare/v0.0.10...v0.0.11) (2022-05-13)
+
+
+### Features
+
+* **openapi:** list complete, fixed summaries ([94f756e](https://github.com/eyzi/plurk-api/commit/94f756e1620f7c938187f7f6aec74f259d4862e0))
+
 ### [0.0.10](https://github.com/eyzi/plurk-api/compare/v0.0.9...v0.0.10) (2022-05-13)
 
 ### [0.0.9](https://github.com/eyzi/plurk-api/compare/v0.0.8...v0.0.9) (2022-05-13)
