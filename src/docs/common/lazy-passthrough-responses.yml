@@ -2,5 +2,7 @@
   description: "Success"
 400:
   description: "Invalid Request"
+401:
+  $ref: "./errors.yml#/NotAuthenticated"
 500:
   description: "Request Error"

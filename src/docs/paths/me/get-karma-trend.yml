@@ -1,6 +1,5 @@
 summary: "Get karma trend of current user"
-operationId: notImplemented
+operationId: getKarmaTrend
 tags: ["me"]
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

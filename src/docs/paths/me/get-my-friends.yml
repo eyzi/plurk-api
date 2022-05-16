@@ -1,6 +1,5 @@
 summary: "Get friends of current user"
-operationId: notImplemented
+operationId: getOwnFriends
 tags: ["me"]
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

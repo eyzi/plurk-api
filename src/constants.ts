@@ -10,6 +10,12 @@ export enum HeaderKeys {
 
 export enum PlurkEndpoints {
   GET_OWN_PROFILE = "/APP/Profile/getOwnProfile",
+  GET_OWN_INFO = "/APP/Users/me",
+  UPDATE_OWN_INFO = "/APP/Users/update",
+  GET_KARMA_TREND = "/APP/Users/getKarmaStats",
+  GET_OWN_FRIENDS = "/APP/FriendsFans/getCompletion",
+  GET_OWN_FANS = "/APP/FriendsFans/getFollowingByOffset",
+  GET_BLOCKED = "/APP/Blocks/get",
   CHECK_TOKEN = "/APP/checkToken",
   EXPIRE_TOKEN = "/APP/expireToken",
   ECHO = "/APP/echo",

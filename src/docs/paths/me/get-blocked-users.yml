@@ -1,6 +1,11 @@
 summary: "Get blocked users"
-operationId: notImplemented
+operationId: getBlocked
 tags: ["me"]
+parameters:
+  - name: offset
+    in: query
+    description: What page should be shown, e.g. 0, 10, 20.
+    schema:
+      type: string
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

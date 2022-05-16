@@ -1,6 +1,40 @@
 summary: "Edit info of current user"
-operationId: notImplemented
+operationId: updateUserInfo
 tags: ["me"]
+parameters:
+  - name: full_name
+    in: query
+    description: Change full name
+    schema:
+      type: string
+  - name: email
+    in: query
+    description: Change email
+    schema:
+      type: string
+  - name: display_name
+    in: query
+    description: |
+      User's display name, can be empty and full unicode.
+      Must be shorter than 15 characters.
+    schema:
+      type: string
+  - name: privacy
+    in: query
+    description: |
+      User's privacy settings. The option can be world (whole world
+      can view the profile) or only_friends (only friends can view
+      the profile).
+    schema:
+      type: string
+      enum:
+        - world
+        - only_friends
+  - name: date_of_birth
+    in: query
+    description: Should be YYYY-MM-DD, example 1985-05-13
+    schema:
+      type: string
+      format: date
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

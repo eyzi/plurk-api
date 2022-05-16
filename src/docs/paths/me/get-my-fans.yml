@@ -1,6 +1,16 @@
 summary: "Get fans of current user"
-operationId: notImplemented
+operationId: getOwnFans
 tags: ["me"]
+parameters:
+  - name: offset
+    in: query
+    description: Offset of list. (defaults to 0)
+    schema:
+      type: number
+  - name: limit
+    in: query
+    description: Limit of list. (defaults to 1000)
+    schema:
+      type: number
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"
