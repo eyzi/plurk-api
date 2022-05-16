@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/eyzi/plurk-api/compare/v0.0.12...v0.0.13) (2022-05-16)
+
+
+### Features
+
+* **api:** implement oauth, info, and cliques operations ([f672adb](https://github.com/eyzi/plurk-api/commit/f672adb35ce0bcb6ace359588ac6e4afe0885a72))
+
 ### [0.0.12](https://github.com/eyzi/plurk-api/compare/v0.0.11...v0.0.12) (2022-05-13)
 
 ### [0.0.11](https://github.com/eyzi/plurk-api/compare/v0.0.10...v0.0.11) (2022-05-13)
