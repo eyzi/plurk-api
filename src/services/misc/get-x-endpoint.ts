@@ -1,0 +1,1 @@
+export default (req: any) => req.operationDoc?.["x-endpoint"]

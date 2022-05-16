@@ -1,6 +1,5 @@
 summary: "Repeat sent data"
-x-endpoint: /APP/echo
-operationId: lazyPassthrough
+operationId: echo
 tags: ["info"]
 parameters:
   - name: data

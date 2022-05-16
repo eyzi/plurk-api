@@ -1,6 +1,5 @@
 summary: "Search plurks"
-x-endpoint: /APP/PlurkSearch/search
-operationId: lazyPassthrough
+operationId: plurkSearch
 tags: ["info"]
 parameters:
   - name: query

@@ -1,5 +1,5 @@
 summary: "Expire authentication token"
-operationId: notImplemented # expireOauth
+operationId: expireOauth
 tags: ["oauth"]
 responses:
   200:

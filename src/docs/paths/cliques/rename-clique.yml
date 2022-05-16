@@ -1,6 +1,18 @@
 summary: Rename clique
-operationId: notImplemented
+operationId: renameClique
 tags: ["cliques"]
+parameters:
+  - name: name
+    in: path
+    description: Clique to rename
+    required: true
+    schema:
+      type: string
+  - name: name
+    in: query
+    description: New name for the clique
+    required: true
+    schema:
+      type: string
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

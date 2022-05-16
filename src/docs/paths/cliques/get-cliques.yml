@@ -1,6 +1,5 @@
 summary: Get cliques
-operationId: notImplemented
+operationId: getCliques
 tags: ["cliques"]
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+    $ref: "../../common/lazy-passthrough-responses.yml"

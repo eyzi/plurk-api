@@ -21,3 +21,10 @@ NotImplemented:
 
 UnknownError:
   description: "Something went wrong"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          error:
+            type: string

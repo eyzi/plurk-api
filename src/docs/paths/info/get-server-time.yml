@@ -1,6 +1,5 @@
 summary: "Get server time"
-x-endpoint: /APP/checkTime
-operationId: lazyPassthrough
+operationId: getServerTime
 tags: ["info"]
 responses:
   $ref: "../../common/lazy-passthrough-responses.yml"

@@ -1,6 +1,5 @@
 summary: "Search users"
-x-endpoint: /APP/UserSearch/search
-operationId: lazyPassthrough
+operationId: userSearch
 tags: ["info"]
 parameters:
   - name: query

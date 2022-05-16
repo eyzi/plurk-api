@@ -1,6 +1,12 @@
 summary: Get clique by name
-operationId: notImplemented
+operationId: getCliqueByName
 tags: ["cliques"]
+parameters:
+  - name: name
+    in: path
+    required: true
+    description: Name of clique to get
+    schema:
+      type: string
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

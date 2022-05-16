@@ -1,6 +1,18 @@
 summary: Add user to clique
-operationId: notImplemented
+operationId: addCliqueUser
 tags: ["cliques"]
+parameters:
+  - name: name
+    in: path
+    description: Clique name to add user
+    required: true
+    schema:
+      type: string
+  - name: userId
+    in: path
+    description: User to add to clique
+    required: true
+    schema:
+      type: string
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

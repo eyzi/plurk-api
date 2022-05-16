@@ -1,6 +1,18 @@
-summary: Remove user from clique
-operationId: notImplemented
+summary: Remove user to clique
+operationId: removeCliqueUser
 tags: ["cliques"]
+parameters:
+  - name: name
+    in: path
+    description: Clique name to add user
+    required: true
+    schema:
+      type: string
+  - name: userId
+    in: path
+    description: User to add to clique
+    required: true
+    schema:
+      type: string
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

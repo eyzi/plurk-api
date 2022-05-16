@@ -1,6 +1,12 @@
 summary: Create clique
-operationId: notImplemented
+operationId: createClique
 tags: ["cliques"]
+parameters:
+  - name: name
+    in: path
+    required: true
+    description: Name of clique to create
+    schema:
+      type: string
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

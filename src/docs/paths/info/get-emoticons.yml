@@ -1,6 +1,5 @@
 summary: "Get emoticons"
-x-endpoint: /APP/Emoticons/get
-operationId: lazyPassthrough
+operationId: getEmoticons
 tags: ["info"]
 responses:
   $ref: "../../common/lazy-passthrough-responses.yml"
