@@ -8,9 +8,9 @@ import buildUrl from "../plurk/url/build-url"
 import getXEndpoint from "./get-x-endpoint"
 import { StatusCodes } from "http-status-codes"
 
-type RequestBuilder = (req: Request) => <T>(data: T) => any
+type RequestBuilder = (req: Request) => any
 
-const defaultBuilder = (_: Request) => <T>(data: T) => data
+const defaultBuilder = (req: Request) => req.query ?? {}
 
 const defaultHandler = (plurkEndpoint: PlurkEndpoints | undefined, queryBuilder: RequestBuilder = defaultBuilder): Handler => (req, res) => {
   const endpoint = plurkEndpoint ?? getXEndpoint(req)
@@ -19,7 +19,7 @@ const defaultHandler = (plurkEndpoint: PlurkEndpoints | undefined, queryBuilder:
   return sendPost(
     buildOauthObject(req),
     buildUrl(endpoint),
-    queryBuilder(req)(req.query))
+    queryBuilder(req))
       .then(buildResponse(res))
       .catch(buildErrorResponse(res))
 }

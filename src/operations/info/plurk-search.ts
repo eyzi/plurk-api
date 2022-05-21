@@ -1,14 +1,10 @@
-import { Handler } from "express";
-import { PlurkEndpoints } from "../../constants";
-import buildOauthObject from "../../services/oauth/build-oauth-object";
-import sendPost from "../../services/oauth/send-post";
-import buildErrorResponse from "../../services/plurk/response/build-error-response";
-import buildResponse from "../../services/plurk/response/build-response";
-import buildUrl from "../../services/plurk/url/build-url";
+import { Request } from "express"
+import { PlurkEndpoints } from "../../constants"
+import defaultHandler from "../../services/misc/passthrough-handler"
 
-export const plurkSearch: Handler = (req, res) => sendPost(
-  buildOauthObject(req),
-  buildUrl(PlurkEndpoints.PLURK_SEARCH),
-  req.query)
-    .then(buildResponse(res))
-    .catch(buildErrorResponse(res))
+const reqBuilder = (req: Request) => ({
+  query: req.query.query,
+  offset: req.query.offset,
+})
+
+export const plurkSearch = defaultHandler(PlurkEndpoints.PLURK_SEARCH, reqBuilder)

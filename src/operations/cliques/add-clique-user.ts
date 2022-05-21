@@ -2,7 +2,7 @@ import { Request } from "express"
 import { PlurkEndpoints } from "../../constants"
 import defaultHandler from "../../services/misc/passthrough-handler"
 
-const reqBuilder = (req: Request) => (query: any) => ({
+const reqBuilder = (req: Request) => ({
   clique_name: req.params.name,
   user_id: req.params.userId
 })
