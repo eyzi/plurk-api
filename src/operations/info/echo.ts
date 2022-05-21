@@ -6,4 +6,4 @@ const reqBuilder = (req: Request) => ({
   data: req.query.data
 })
 
-export const addCliqueUser = defaultHandler(PlurkEndpoints.ECHO, reqBuilder)
+export const echo = defaultHandler(PlurkEndpoints.ECHO, reqBuilder)
