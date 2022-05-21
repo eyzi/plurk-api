@@ -1,5 +1,6 @@
 summary: "Get server time"
 operationId: getServerTime
-tags: ["info"]
+tags:
+  - "info"
 responses:
   $ref: "../../common/lazy-passthrough-responses.yml"

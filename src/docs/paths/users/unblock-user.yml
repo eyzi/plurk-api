@@ -1,4 +1,4 @@
-summary: Get user profile
+summary: Unblock user
 operationId: notImplemented
 tags: ["users"]
 responses:

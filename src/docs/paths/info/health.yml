@@ -1,7 +1,8 @@
 summary: "API health check"
 operationId: health
 x-skip-oauth-check: true
-tags: ["info"]
+tags:
+  - "info"
 responses:
   200:
     description: "Healthy"

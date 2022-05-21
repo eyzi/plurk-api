@@ -1,6 +1,7 @@
 summary: "Repeat sent data"
 operationId: echo
-tags: ["info"]
+tags:
+  - "info"
 parameters:
   - name: data
     in: query

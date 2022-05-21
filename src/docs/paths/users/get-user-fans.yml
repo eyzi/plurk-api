@@ -1,6 +1,19 @@
 summary: Get user fans
-operationId: notImplemented
-tags: ["users"]
+operationId: getUserFans
+parameters:
+  - $ref: "../../common/parameters.yml#/PathUserId"
+  - name: offset
+    description: The offset, can be 10, 20, 30 etc.
+    in: query
+    schema:
+      type: integer
+  - name: limit
+    description: |
+      The max number of friends to be returned (default 10).
+    in: query
+    schema:
+      type: integer
+tags:
+  - "users"
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

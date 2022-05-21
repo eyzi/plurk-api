@@ -1,6 +1,7 @@
 summary: "Search plurks"
 operationId: plurkSearch
-tags: ["info"]
+tags:
+  - "info"
 parameters:
   - name: query
     in: query

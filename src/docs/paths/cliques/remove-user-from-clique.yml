@@ -1,6 +1,7 @@
 summary: Remove user to clique
 operationId: removeCliqueUser
-tags: ["cliques"]
+tags:
+  - "cliques"
 parameters:
   - name: name
     in: path

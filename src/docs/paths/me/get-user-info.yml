@@ -1,5 +1,6 @@
 summary: "Get info of current user"
 operationId: getUserInfo
-tags: ["me"]
+tags:
+  - "me"
 responses:
   $ref: "../../common/lazy-passthrough-responses.yml"

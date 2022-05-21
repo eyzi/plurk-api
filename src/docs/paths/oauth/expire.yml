@@ -1,6 +1,7 @@
 summary: "Expire authentication token"
 operationId: expireOauth
-tags: ["oauth"]
+tags:
+  - "oauth"
 responses:
   200:
     description: "Token successfully expired"

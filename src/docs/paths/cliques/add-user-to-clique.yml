@@ -1,6 +1,7 @@
 summary: Add user to clique
 operationId: addCliqueUser
-tags: ["cliques"]
+tags:
+  - "cliques"
 parameters:
   - name: name
     in: path

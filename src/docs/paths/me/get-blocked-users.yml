@@ -1,6 +1,7 @@
 summary: "Get blocked users"
 operationId: getBlocked
-tags: ["me"]
+tags:
+  - "me"
 parameters:
   - name: offset
     in: query

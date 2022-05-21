@@ -29,4 +29,9 @@ export enum PlurkEndpoints {
   RENAME_CLIQUE = "/APP/Cliques/renameClique",
   ADD_CLIQUE_USER = "/APP/Cliques/add",
   REMOVE_CLIQUE_USER = "/APP/Cliques/remove",
+  GET_USER_PROFILE = "/APP/Profile/getPublicProfile",
+  GET_USER_PLURKS = "/APP/Timeline/getPublicPlurks",
+  GET_USER_FRIENDS = "/APP/FriendsFans/getFriendsByOffset",
+  GET_USER_FANS = "/APP/FriendsFans/getFansByOffset",
+
 }

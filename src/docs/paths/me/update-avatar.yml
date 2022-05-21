@@ -1,5 +1,6 @@
 operationId: notImplemented
-tags: ["me"]
+tags:
+  - "me"
 responses:
   503:
     $ref: "../../common/errors.yml#/NotImplemented"

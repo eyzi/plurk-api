@@ -1,6 +1,7 @@
 summary: Get clique by name
 operationId: getCliqueByName
-tags: ["cliques"]
+tags:
+  - "cliques"
 parameters:
   - name: name
     in: path

@@ -1,6 +1,7 @@
 summary: "Edit info of current user"
 operationId: updateUserInfo
-tags: ["me"]
+tags:
+  - "me"
 parameters:
   - name: full_name
     in: query

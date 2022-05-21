@@ -1,7 +1,8 @@
 summary: "Verify authentication"
 operationId: verifyOauth
 x-skip-oauth-check: true
-tags: ["oauth"]
+tags:
+  - "oauth"
 parameters:
   - name: oauth_verifier
     description: oAuth verifier

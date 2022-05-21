@@ -1,6 +1,7 @@
 summary: Rename clique
 operationId: renameClique
-tags: ["cliques"]
+tags:
+  - "cliques"
 parameters:
   - name: name
     in: path

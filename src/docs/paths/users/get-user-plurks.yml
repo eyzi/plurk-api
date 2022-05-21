@@ -1,8 +1,24 @@
 summary: get user plurks
-operationId: notImplemented
+operationId: getUserPlurks
+parameters:
+  - $ref: "../../common/parameters.yml#/PathUserId"
+  - name: offset
+    description: Return plurks older than date
+    in: query
+    schema:
+      type: string
+      format: date-time
+  - name: limit
+    description: |
+      Limit the number of plurks that is retunred (default: 20)
+    in: query
+    schema:
+      type: integer
+  - $ref: "../../common/parameters.yml#/FavorersDetail"
+  - $ref: "../../common/parameters.yml#/LimitedDetail"
+  - $ref: "../../common/parameters.yml#/ReplurkersDetail"
 tags:
   - users
   - plurks
 responses:
-  501:
-    $ref: "../../common/errors.yml#/NotImplemented"
+  $ref: "../../common/lazy-passthrough-responses.yml"

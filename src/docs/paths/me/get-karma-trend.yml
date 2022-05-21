@@ -1,5 +1,6 @@
 summary: "Get karma trend of current user"
 operationId: getKarmaTrend
-tags: ["me"]
+tags:
+  - "me"
 responses:
   $ref: "../../common/lazy-passthrough-responses.yml"

@@ -1,0 +1,34 @@
+FavorersDetail:
+  name: favorers_detail
+  description: |
+    If true, detailed users information about all favorers of all
+    plurks will be included into "plurk_users"
+  in: query
+  schema:
+    type: boolean
+
+LimitedDetail:
+  name: limited_detail
+  description: |
+    If true, detailed users information about all private plurks'
+    recepients will be included into "plurk_users"
+  in: query
+  schema:
+    type: boolean
+
+ReplurkersDetail:
+  name: replurkers_detail
+  description: |
+    If true, detailed users information about all replurkers of
+    all plurks will be included into "plurk_users"
+  in: query
+  schema:
+    type: boolean
+
+PathUserId:
+  name: userId
+  description: Id of user
+  required: true
+  in: path
+  schema:
+    type: string

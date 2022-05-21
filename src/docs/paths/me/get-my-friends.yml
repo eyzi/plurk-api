@@ -1,5 +1,6 @@
 summary: "Get friends of current user"
 operationId: getOwnFriends
-tags: ["me"]
+tags:
+  - "me"
 responses:
   $ref: "../../common/lazy-passthrough-responses.yml"

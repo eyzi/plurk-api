@@ -1,6 +1,7 @@
 summary: "Search users"
 operationId: userSearch
-tags: ["info"]
+tags:
+  - "info"
 parameters:
   - name: query
     in: query

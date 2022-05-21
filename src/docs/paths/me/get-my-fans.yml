@@ -1,6 +1,7 @@
 summary: "Get fans of current user"
 operationId: getOwnFans
-tags: ["me"]
+tags:
+  - "me"
 parameters:
   - name: offset
     in: query
