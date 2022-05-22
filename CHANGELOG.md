@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/eyzi/plurk-api/compare/v0.0.14...v0.0.15) (2022-05-22)
+
+
+### Features
+
+* **api:** implement users get operations ([eaf76c4](https://github.com/eyzi/plurk-api/commit/eaf76c4d9350bf0a9f187bde179e5580d84114e8))
+
+
+### Bug Fixes
+
+* **api:** echo operation typo ([0523cb5](https://github.com/eyzi/plurk-api/commit/0523cb5bf972a9cb9032aa6b4f9b85341e612286))
+
 ### [0.0.14](https://github.com/eyzi/plurk-api/compare/v0.0.13...v0.0.14) (2022-05-16)
 
 
